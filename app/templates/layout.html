@@ -1,7 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
    <head>
-      <title>{{ title }}</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description"
+            content="ChatFlare: un proyecto de pasatiempo sencillo y divertido construido con Python-Flask y Socket IO para chatear globalmente.">
+      <meta name="keywords"
+            content="ChatFlare, chat global, Python-Flask, Socket IO, pasatiempo">
+      <meta name="author" content="Junior Rumiche">
+      <meta name="robots" content="index, follow">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>{{ title }} | ChatFlare</title>
       <link rel="stylesheet"
             href="{{ url_for('static', filename='css/app.css') }}" />
       <link rel="stylesheet"
@@ -13,6 +22,18 @@
             href="{{ url_for('static', filename='css/login.css') }}" />
       <link rel="stylesheet"
             href="{{ url_for('static', filename='css/style.css') }}" />
+      <link rel="canonical" href="https://juniorrumiche.github.io/">
+      <!-- Open Graph / Facebook -->
+      <meta property="og:type" content="website">
+      <meta property="og:title" content="{{ title }} | ChatFlare">
+      <meta property="og:description"
+            content="ChatFlare: un proyecto de pasatiempo sencillo y divertido construido con Python-Flask y Socket IO para chatear globalmente.">
+      <!-- Twitter -->
+      <meta property="twitter:title" content="{{ title }} | ChatFlare">
+      <meta property="twitter:description"
+            content="ChatFlare: un proyecto de pasatiempo sencillo y divertido construido con Python-Flask y Socket IO para chatear globalmente.">
+      <meta property="twitter:image" content="URL_DE_LA_IMAGEN">
+      <!-- Additional SEO elements can be added here -->
       {% block extracss %}
       {% endblock extracss %}
    </head>
