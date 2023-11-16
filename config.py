@@ -25,8 +25,6 @@ class Config(object):
     """
 
     SECRET_KEY = os.environ.get("SECRET_KEY", None)
-    DEBUG = os.environ.get("DEBUG", False)
-    SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(
-        os.path.abspath(os.path.dirname(__file__)), "sqlite.db"
-    )
+    DEBUG = False
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URI", None)
     SQLALCHEMY_TRACK_MODIFICATIONS = False
