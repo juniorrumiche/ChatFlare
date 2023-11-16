@@ -1,0 +1,75 @@
+:root {
+   --shark-50: #f3f7f8;
+   --shark-100: #e1ebec;
+   --shark-200: #c7d8da;
+   --shark-300: #a0bcc0;
+   --shark-400: #71999f;
+   --shark-500: #567d84;
+   --shark-600: #4a6970;
+   --shark-700: #41575d;
+   --shark-800: #222d31;
+   --shark-900: #344045;
+   --shark-950: #1a2225;
+
+   --darken-800: #334046;
+}
+.bg-shark-950 {
+   background: var(--shark-950);
+}
+
+.bg-shark-800 {
+   background: var(--shark-800);
+}
+
+.bg-darken-800 {
+   background: var(--darken-800);
+}
+.messages {
+   max-height: 400px;
+   min-height: 300px;
+   overflow: auto;
+}
+
+.link {
+   all: unset;
+}
+.link:hover {
+   background: var(--shark-800);
+}
+
+/* Firefox */
+* {
+   scrollbar-width: thin;
+   scrollbar-color: #557c85 #3a4a50;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+   height: 5px;
+   width: 5px;
+}
+*::-webkit-scrollbar-track {
+   border-radius: 5px;
+   background-color: #3a4a50;
+}
+
+*::-webkit-scrollbar-track:hover {
+   background-color: #b8c0c2;
+}
+
+*::-webkit-scrollbar-track:active {
+   background-color: #3a4a50;
+}
+
+*::-webkit-scrollbar-thumb {
+   border-radius: 4px;
+   background-color: #557c85;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+   background-color: #557c85;
+}
+
+*::-webkit-scrollbar-thumb:active {
+   background-color: #557c85;
+}

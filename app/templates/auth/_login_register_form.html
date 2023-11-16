@@ -1,0 +1,42 @@
+<form method="post">
+   {{ form.hidden_tag() }}
+   <div class="form-group">
+      <label class="form-control-label">USERNAME</label>
+      {{ form.username(class='form-control') }}
+   </div>
+   <div class="form-group">
+      <label class="form-control-label">PASSWORD</label>
+      {{ form.password(class='form-control') }}
+   </div>
+   {% if form.password_confirm %}
+      <div class="form-group">
+         <label class="form-control-label">CONFIRM PASSWORD</label>
+         {{ form.password_confirm(class='form-control') }}
+      </div>
+   {% endif %}
+   {% block extra_form_fields %}{% endblock %}
+   <div class="col-lg-12 loginbttm">
+      <div class="col-lg-12 w-100 login-btm login-text text-sm">
+         {% with messages = get_flashed_messages() %}
+            {% if messages %}
+               {% for
+                  message in messages %}
+                  <div class="alert bg-darken-800 text-sm">{{ message }}</div>
+               {% endfor %}
+            {% endif %}
+         {% endwith %}
+         <!-- Error Message -->
+         {% for field, errors in errors.items() %}
+            {% for error in errors %}
+               <div class="alert alert-danger text-sm">
+                  <strong>{{ field }}</strong> {{ error }}
+               </div>
+            {% endfor %}
+         {% endfor %}
+      </div>
+      <div class="col-lg-12 btn-block login-btm login-button mt-2">
+         <button type="submit"
+                 class="btn btn-block btn-outline-primary text-uppercase">{{ form.submit.label }}</button>
+      </div>
+   </div>
+</form>

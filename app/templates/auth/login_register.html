@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block content %}
+   <div class="col-lg-5 col-md-5 login-box danger px-5 py-3 rounded">
+      <div class="col-lg-12 login-form mt-5 radius">
+         <div class="col-lg-12 login-form">{% include 'auth/_login_register_form.html' %}</div>
+         <div class=" col-12 text-center d-block w-100">
+            {% if form.password_confirm %}
+               <p>
+                  Ready to join the conversation?
+                  <a class="font-bold" href="/auth/login">Log in now!</a>
+               </p>
+            {% else %}
+               <p>
+                  Ready to join the conversation?
+                  <a class="font-bold" href="/auth/register">Create your account now!</a>
+               </p>
+            {% endif %}
+         </div>
+      </div>
+   </div>
+{% endblock %}
